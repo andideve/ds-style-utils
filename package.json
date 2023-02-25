@@ -1,0 +1,61 @@
+{
+  "name": "ds-style-utils",
+  "version": "0.1.0",
+  "keywords": [],
+  "homepage": "https://github.com/andideve/ds-style-utils",
+  "bugs": "https://github.com/andideve/ds-style-utils/issues",
+  "license": "MIT",
+  "author": "Andi <andideve0@gmail.com>",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andideve/ds-style-utils.git"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --no-cache",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "module": "dist/ds-style-utils.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/ds-style-utils.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/ds-style-utils.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "peerDependencies": {
+    "@emotion/styled": "^11.10.4"
+  },
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^8.2.4",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.4",
+    "size-limit": "^8.2.4",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.5.0",
+    "typescript": "^3.9.10"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
